@@ -2,69 +2,223 @@
 <html>
 
 <head>
-    <title>Inicio</title>
-    <link href="/CSS/AnadirProducto.css" rel="stylesheet" type="text/css">
+    <title>Carrito</title>
+    <link href="/CSS/carrito.css" rel="stylesheet" type="text/css">
 </head>
 
-if(isset($_SESSION['carrito']) || isset($_POST['titulo'])){
-	if(isset($_SESSION['carrito'])){
-		$carrito_mio=$_SESSION['carrito'];
-		if(isset($_POST['titulo'])){
-			$titulo=$_POST['titulo'];
-			$precio=$_POST['precio'];
-			$cantidad=$_POST['cantidad'];
-			$ref=$_POST['ref'];
-			$donde=-1;
-			for($i=0;$i<=count($carrito_mio)-1;$i ++){
-			   if($ref==$carrito_mio[$i]['ref']){
-			   }
-			}
-			if($donde != -1){
-				$cuanto=$carrito_mio[$donde]['cantidad'] + $cantidad;
-				$carrito_mio[$donde]=array("titulo"=>$titulo,"precio"=>$precio,"cantidad"=>$cuanto,"ref"=>$ref);
-			}else{
-				$carrito_mio[]=array("titulo"=>$titulo,"precio"=>$precio,"cantidad"=>$cantidad,"ref"=>$ref);
-			}
-		}
-	}else{
-		$titulo=$_POST['titulo'];
-		$precio=$_POST['precio'];
-		$cantidad=$_POST['cantidad'];
-		$ref=$_POST['ref'];
-		$carrito_mio[]=array("titulo"=>$titulo,"precio"=>$precio,"cantidad"=>$cantidad,"ref"=>$ref);	
-	}
-	if(isset($_POST['cantidad'])){
-		$id=$_POST['id'];
-		$cuantos=$_POST['cantidad'];
-		if($cuantos<1){
-			$carrito_mio[$id]=NULL;
-		}else{
-			$carrito_mio[$id]['cantidad']=$cuantos;
-		}
-	}
-	if(isset($_POST['id2'])){
-		$id=$_POST['id2'];
-		$carrito_mio[$id]=NULL;
-	}
-$_SESSION['carrito']=$carrito_mio;
-}
-if(isset($_SESSION['carrito'])){
-for($i=0;$i<=count($carrito_mio)-1;$i ++){
-if($carrito_mio[$i]!=NULL){ 
-$totalc = $carrito_mio['cantidad'];
-$totalc ++ ;
-$totalcantidad += $totalc;
-}
-}
+<body>
+    <div >
+        <img src="/Img/logo.png" width="5%">
+    
+        <nav>
+            <ul>
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="AnadirProducto.html">Añadir productos</a></li>
+                    <li><a href="CRUD.html">CRUD</a></li>
+                    <li><a href="Carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    
+    </div>
+     <div class="formularioDeAnadirProducto">
+        <div class="mostrar producto">
+            
+			<div class="menuSeleccionPago">
+				<div class="Espacio">
+				</div>
+				<label><input type="radio" name="pago" value="paypal">Paypal</label>
+				<div class="Espacio">
+				</div>
+				<label><input type="radio" name="pago" value="efectivo">Efectivo</label>
+				<div class="Espacio">
+				</div>
+				<label><input type="radio" name="pago" value="tarjeta">Tarjeta de crédito o débito</label>
+				<style>
+					.Espacio {
+						margin: 13px;
+					}
+				</style>
+			  </div>
+			  
+			  
+		
+            </div>
+      
+        <div class="ingresarDatosFormulario">
+		<div class="cuadro">
+			<h2>Carrito De Compras</h2>
+			<table id="tablaProductos">
+				<thead>
+				  <tr>
+					<th>Producto</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+					<th>Total</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Producto 1</td>
+					<td><input type="number" class="precio"></td>
+					<td><input type="number" class="cantidad"></td>
+					<td><span class="total"></span></td>
+				  </tr>
+				  <tr>
+					<td>Producto 2</td>
+					<td><input type="number" class="precio"></td>
+					<td><input type="number" class="cantidad"></td>
+					<td><span class="total"></span></td>
+				  </tr>
+				  <tr>
+					<td>Producto 3</td>
+					<td><input type="number" class="precio"></td>
+					<td><input type="number" class="cantidad"></td>
+					<td><span class="total"></span></td>
+				  </tr>
+				</tbody>
+			  </table>
+			  <div class="space">
 
-//todo OK
+			  </div>
+			  <style>
+				  .space {
+					  margin: 9%;
+				  }
+			  </style>
 
-}else{
-// algo ha salido mal
-}
+			  <div class="DIVTotalAPagar" id="total-a-pagar" style="background-color: red; color: white; padding: 10px;">
+				<h2>Total A Pagar</h2>
+				<p id="total-texto">0</p>
+			  </div>
+
+			  <div style="display:flex; align-items:center; justify-content:center; height:20vh;">
+				<input type="submit" value="Pagar"
+					style="background-color: #E83B19; color: rgb(21, 255, 0); font-size: 34px; padding: 10px 20px; width: 50%; margin: 0 auto;  border-radius: 10px;">
+			</div>
+			  
+
+			  <script>
+				const tablaProductos = document.getElementById('tablaProductos');
+				const precioInputs = tablaProductos.querySelectorAll('.precio');
+				const cantidadInputs = tablaProductos.querySelectorAll('.cantidad');
+				const totalSpans = tablaProductos.querySelectorAll('.total');
+				const totalGeneral2 = document.getElementById('total-texto');
+				
+				function calcularTotal() {
+				  let subtotal = 0;
+				  for (let i = 0; i < precioInputs.length; i++) {
+					const precio = precioInputs[i].value;
+					const cantidad = cantidadInputs[i].value;
+					const total = precio * cantidad;
+					totalSpans[i].textContent = total.toFixed(2);
+					subtotal += total;
+				  }
+				  totalGeneral2.textContent = subtotal.toFixed(2);
+				}
+				
+				for (let i = 0; i < precioInputs.length; i++) {
+				  precioInputs[i].addEventListener('input', calcularTotal);
+				  cantidadInputs[i].addEventListener('input', calcularTotal);
+				}
+				
+			  </script>
+			  </div>
+			  
+			  
+        </div>
+    </div>
+    </div>
+    
 
 
+    <script>
+        function mostrarImagen() {
+            
+            var archivo = document.getElementById('imagen').files[0];
+            var vistaPrevia = document.getElementById('imagen-preview');
+            var lector = new FileReader();
 
+            lector.onload = function (evento) {
+                vistaPrevia.src = evento.target.result;
+            }
 
+            lector.readAsDataURL(archivo);
+        }
+    </script>
 
-?>
+<footer>
+    <div class="columna">
+        <img src="/Img/logo.png" alt="Logo de la empresa">
+    </div>
+    <div class="columna">
+        <h3>Nuestras Redes Sociales:</h3>
+        <ul>
+            <li><a href="#">Facebook CompraFacil</a></li>
+            <li><a href="#">TikTok @CompraFacil</a></li>
+            <li><a href="#">Instagram @CompraFacil</a></li>
+        </ul>
+    </div>
+    <div class="columna">
+        <h3>Contacto</h3>
+        <p>Celular: 1234567890</p>
+        <p>Correo electrónico: Support@comprafacil.com</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #B75252;
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+    }
+
+    .columna {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .columna:last-child {
+        margin-right: 0;
+    }
+
+    .columna img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .columna h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .columna ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .columna ul li {
+        margin-bottom: 5px;
+    }
+
+    .columna ul li a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .columna p {
+        margin-bottom: 5px;
+    }
+</style>
+    
+</body>
+
+</html>
+

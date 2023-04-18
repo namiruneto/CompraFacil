@@ -131,3 +131,83 @@ label[for="imagen"] {
     justify-content: center;
     height: 10%;
 }
+
+
+/*organizacion de estilo*/
+.menuSeleccionPago {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+  }
+  
+  .menuSeleccionPago label {
+    display: block;
+    background-color: #F7DC6F;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    height: auto;
+  }
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  th {
+    background-color: #ccc;
+  }
+  
+  td.total, #total {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  #total {
+    background-color: #f8f8f8;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  #tablaProductos tfoot tr:first-child {
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+  }
+  .DIVTotalAPagar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+
+  /*Organizar el carrito de compras*/
+  .cuadro {
+    background: #F78101;
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .cuadro h3 {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .cuadro p {
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+  }
