@@ -1,27 +1,15 @@
-<?php include_once("template/cabecera.php"); ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Anadir Productos</title>
-    <link href="AnadirProducto.css" rel="stylesheet" type="text/css">
+    <link href="CSS/AnadirProducto.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
-    <div>
-        <img src="Img/logo.png" width="10%" height="10%">
-
-        <nav>
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">Añadir productos</a></li>
-                <li><a href="#">CRUD</a></li>
-            </ul>
-        </nav>
-
-    </div>
+<?php include_once("Template/cabecera.php"); ?>
+   
     <div class="formularioDeAnadirProducto">
         <div class="mostrar producto">
             <label for="imagen">Subir Imagen</label>

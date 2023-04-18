@@ -1,24 +1,4 @@
-</div>
-    <div style="display:flex; align-items:center; justify-content:center; height:20vh;">
-        <input type="submit" value="Publicar"
-            style="background-color: #E83B19; color: white; font-size: 34px; padding: 10px 20px; width: 50%; margin: 0 auto;  border-radius: 10px;">
-    </div>
-
-
-    <script>
-        function mostrarImagen() {
-            var archivo = document.getElementById('imagen').files[0];
-            var vistaPrevia = document.getElementById('imagen-preview');
-            var lector = new FileReader();
-
-            lector.onload = function (evento) {
-                vistaPrevia.src = evento.target.result;
-            }
-
-            lector.readAsDataURL(archivo);
-        }
-    </script>
-    <footer>
+<footer>
         <div class="columna">
             <img src="Img/logo.png" alt="Logo de la empresa">
         </div>
@@ -88,5 +68,3 @@
             margin-bottom: 5px;
         }
     </style>
-</body>
-</html>
