@@ -1,4 +1,4 @@
-<?php include_once("template/cabecera.php"); ?>
+<?php include("template/cabecera.php"); ?>
 
         <div class="jumbotron">
             <h1 class="display-3">Jumbo heading</h1>
@@ -10,4 +10,4 @@
             </p>
         </div>
 
-<?php include_once("template/pie.php"); ?>
+<?php include("template/pie.php"); ?>

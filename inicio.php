@@ -1,12 +1,14 @@
+<?php include_once("template/cabecera.php"); ?>
+
 <!DOCTYPE html>
 <html lang="es"></html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog de java de Ashley</title>
-  <link href="D:\Descargas\SEMESTRE VIII\1. FRONT END\Entrega 2\namiruneto\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link href="css\estilos.css" rel="stylesheet">
+  <title>Inicio</title>
+  <link href="" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="/vista/estilos.css" rel="stylesheet">
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
@@ -32,7 +34,21 @@
              </nav>
         
     </div>
-    
+    <div class="col-md-3">
+
+<div class="card">
+
+    <img class="card-img-top" src="holder.js/100x180/" alt="">
+
+    <div class="card-body">
+        <h4 class="card-title">Title</h4>
+        <a name="" id="" class="btn btn-primary" href="#" role="button">ver más</a>
+        <p class="card-text">Text</p>
+    </div>
+
+    </div>
+
+    </div>
    
     <form action="#" method="post">
       
@@ -124,5 +140,5 @@
         }
       </style>
   </body>
-
+  <?php include_once("template/pie.php"); ?>
 </html>

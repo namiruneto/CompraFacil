@@ -1,8 +1,9 @@
+<?php include_once("template/cabecera.php"); ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Mi tienda en línea</title>
+    <title>Anadir Productos</title>
     <link href="AnadirProducto.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -141,5 +142,5 @@
         }
     </style>
 </body>
-
+<?php include_once("template/pie.php"); ?>
 </html>
