@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos/estilo.css">
+    <title>Tienda</title>
+</head>
+<body>
+
+     <!--menu bar-->
+     <div class="menu-lista">
+        <ul class="menu-barra" >
+          <a href="#inicio"><img src="/iconos/carrito.jpg" alt="Logo" class="Logo"></a>
+          <li class="menu-item"><a href="#inicio">Inicio</a></li>
+          <li class="menu-item"><a href="#Tienda">Tienda</a></li>
+          <li class="menu-item"><a href="#Añadir productos">Añadie prouctos</a></li>
+          <li class="menu-item"><a href="#CRUD">CRUD</a></li>
+        </ul>
+      </div>
+     <!-- galeria de imagenes  -->
+    <section class="contenido">
+
+        <div class="mostrador" id="mostrador">
+            <!-- contenedor 1  -->
+            <div class="fila">
+                <!-- producto #1  -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/zapato.png" alt="">
+                    </div>
+                    <p class="descripcion">zapatos</p>
+                    <p class="valor"></p>
+                    <span class="precio">$ 1.300</span>
+                    <i class="oculto" style="display: none;">zapatos elegantes negros</i>
+                </div>
+                <!-- producto #2  -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/arroz.png" alt="">
+                    </div>
+                    <p class="descripcion" id>arroz</p>
+                    <span class="precio">$ 1.800</span>
+                    <i class="oculto" style="display: none;">arroz diana</i>
+                </div>
+                <!-- producto #3  -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/cepillo.png" alt="">
+                    </div>
+                    <p class="descripcion">cepillo
+                    </p>
+                    <span class="precio">$ 3.600</span>
+                </div>
+                <!-- producto #4  -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/chocorramo.png" alt="">
+                    </div>
+                    <p class="descripcion">chocorramo</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div>
+            <div class="fila">
+                <!-- producto #5 -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/cocacolagrande.png" alt="">
+                    </div>
+                    <p class="descripcion">Coca cola 2l</p>
+                    <span class="precio">$ 130</span>
+                </div>
+                <!-- producto #6  -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/cocacolapequeña.png" alt="">
+                    </div>
+                    <p class="descripcion">Coca cola 500ml</p>
+                    <span class="precio">$ 2.000</span>
+                </div>
+                <!-- producto #7  -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/frijol.png" alt="">
+                    </div>
+                    <p class="descripcion">frijol</p>
+                    <span class="precio">$ 2.500</span>
+                </div>
+                <!-- producto #8 -->
+                <div class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="/iconos/lenteja.png" alt="">
+                    </div>
+                    <p class="descripcion">lenteja</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+               
+            </div> 
+            <a href="/vista/tienda.html" ><img src="/iconos/flecha-izquierda.png" class="atras"></a>
+            <a href="/vista/tienda3.html" ><img src="/iconos/boton-de-avance.png" class="siguiente"></a>
+            <!-- contenedor2  -->
+
+        </div>
+
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+            </div>
+            <div class="info">
+                <img src="" alt="" id="img">
+                <h2 id="modelo"></h2>
+                <i id="oculto"></i>
+                 <span class="precio" id="precio"></span> 
+                <div class="fila">   
+                    <button>Comprar</button>
+                </div>
+            </div>
+        <div>
+            
+        </div>
+        </div>
+    </div>
+    </section>
+    <div class="piePagina">
+        <a href="#inicio"><img src="/iconos/carrito1.png" alt="Logo" class="Logo"></a>
+    
+      </div>
+
+    <script src="/estilos/script.js"></script>
+</body>
+</html>
