@@ -4,10 +4,11 @@
 
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Añadir productos</a></li>
-            <li><a href="#">CRUD</a></li>
+                <li><a href="vista/inicio.php">Inicio</a></li>
+                <li><a href="vista/tienda.html">Tienda</a></li>
+                <li><a href="vista/Añadir_produc.php">Añadir productos</a></li>
+                <li><a href="vista/CRUD.php">CRUD</a></li>
+                <li><a href="#">Carito</a></li>
         </ul>
     </nav>
 
