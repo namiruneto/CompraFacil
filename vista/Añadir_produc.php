@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<?php include_once("Template/cabecera.php"); ?>
+<?php include_once("template/cabecera.php"); ?>
    
     <div class="formularioDeAnadirProducto">
         <div class="mostrar producto">
