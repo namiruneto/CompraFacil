@@ -1,13 +1,4 @@
-/*organizar el menu */
-.ElementoMenu{
-    width: 100% !important;
-    height: 420& !important;
-
-
-}
-
-
-
+/*menu*/
 nav {
     background-color: white;
     /* color de fondo del menú */
