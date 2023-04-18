@@ -3,12 +3,12 @@
 
 <head>
     <title>Inicio</title>
-    <link href="/CSS/AnadirProducto.css" rel="stylesheet" type="text/css">
+    <link href="/CSS/inicio.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div >
-        <img src="/Img/logo.png" width="10%" height="10%">
+        <img src="/Img/logo.png" width="5%">
     
         <nav>
             <ul>
@@ -23,55 +23,36 @@
     </div>
      <div class="formularioDeAnadirProducto">
         <div class="mostrar producto">
-            <label for="imagen"></label>
-            <input type="file" id="imagen" name="imagen">
-
+            
+                <img src="/Img/logo.png" width="auto">
+           
             
             </div>
 
 
-        </div>
+      
         <div class="ingresarDatosFormulario">
+            <div class="cuadro">
+                <h3>Supermercado CompraFácil</h3>
+                <div class="space">
 
-            </form>
+                </div>
+                <style>
+                    .space {
+                        margin: 9%;
+                    }
+                </style>
+                <p>CompraFácil es un supermercado que se destaca por su atención al cliente y su amplia variedad de productos de alta calidad. Desde frutas y verduras frescas hasta carnes, lácteos y productos de limpieza, CompraFácil tiene todo lo que necesitas para hacer tus compras semanales de manera fácil y conveniente. Además, en CompraFácil encontrarás precios accesibles y ofertas especiales en una amplia gama de productos, lo que te permitirá ahorrar dinero sin sacrificar la calidad. Con su ambiente limpio y ordenado, y su personal amable y servicial, CompraFácil es la elección perfecta para aquellos que buscan una experiencia de compra rápida, sencilla y agradable.</p>
+              </div>
         </div>
-
     </div>
-    <div style="display:flex; align-items:center; justify-content:center; height:20vh;">
-        <input type="submit" value="Supermercado Compra Facil
-
-        CompraFácil es un supermercado 
-        que se destaca por su atención 
-        al cliente, y por su amplia variedad 
-        de productos de alta calidad. 
-        Desde frutas y verduras frescas
-        hasta carnes, lacteos y productos de limpieza.
-        CompraFácil tiene todo lo que necesita para 
-        hacer CompraFácil es un supermercado 
-        que se destaca por su atención 
-        al cliente, y por su amplia variedad 
-        de productos de alta calidad. 
-        Desde frutas y verduras frescas
-        hasta carnes, lacteos y productos de limpieza.
-        CompraFácil tiene todo lo que necesita para 
-        hacer tus compras semanales de manera facil y 
-        conveniente. Ademas en CompraFácil encontraras 
-        precios asequible y ofertas especiales en una 
-        amplia gama de productos, loque te permitirá 
-        ahorrar dinero sin sacrificar la calidad.
-        tus compras semanales de manera facil y 
-        conveniente. Ademas en CompraFácil encontraras 
-        precios asequibles y ofertas especiales en una 
-        amplia gama de productos, loque te permitirá 
-        ahorrar dinero sin sacrificar la calidad.
-       
-s
-        style="background-color: #E83B19; color: rgb(255, 255, 255); font-size: 34px; padding: 10px 20px; width: 50%; margin: 0 auto;  border-radius: 10px;">
     </div>
+    
 
 
     <script>
         function mostrarImagen() {
+            
             var archivo = document.getElementById('imagen').files[0];
             var vistaPrevia = document.getElementById('imagen-preview');
             var lector = new FileReader();

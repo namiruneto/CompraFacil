@@ -46,3 +46,124 @@ body {
     height: 400vh;
 }
 
+/*dividir */
+/* Dividir la informacion a mostrar del formulario y la imagen subida*/
+.formularioDeAnadirProducto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* estilo del formulario*/
+form {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 150%;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/*estilo de texto*/
+
+.cuadro {
+    background: linear-gradient(to bottom, #E83B19, #F78101);
+    padding: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .cuadro h3 {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .cuadro p {
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+
+
+
+  
+/* borde para la imagen */
+.image-container {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #aaa;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* centrar el text de subir imagen*/
+label[for="imagen"] {
+    font-size: 150%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+
+  
