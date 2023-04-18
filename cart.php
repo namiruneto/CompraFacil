@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
+<?php session_start();
 
-<head>
-    <title>Inicio</title>
-    <link href="/CSS/AnadirProducto.css" rel="stylesheet" type="text/css">
-</head>
+
+
+
+
 
 if(isset($_SESSION['carrito']) || isset($_POST['titulo'])){
 	if(isset($_SESSION['carrito'])){
