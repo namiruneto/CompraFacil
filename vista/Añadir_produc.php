@@ -3,7 +3,7 @@
 
 <head>
     <title>Anadir Productos</title>
-    <link href="AnadirProducto.css" rel="stylesheet" type="text/css">
+    <link href="CSS/AnadirProducto.css" rel="stylesheet" type="text/css">
 
 </head>
 
