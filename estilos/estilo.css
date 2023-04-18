@@ -143,37 +143,12 @@ li {
   li a:hover {
     background-color: #111;
   }
-  .Logo {
-    align-items:right;
-    width: 165px;
-    height: 120px;
-  }
-  .menu-barra{
-    align-items: right;
-    overflow-x: auto;
-    background-color: white;
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-      margin: 0; 
-  }
-  .menu-item li a {
-    display: block;
-    padding: 10px;
-     /* Cambia el color de texto aquí */
-    text-decoration: none;
-  }
-  .menu-lista{
-    display: flex;
-  }
-  .menu-item {
-    flex-grow: 1;
-    text-align: left;
-  }
+  
   .piePagina{
     background-color:#B75252;
-    max-width: 100%;
+    width: 100%;
   }
+  
   .siguiente{
     width: 33px;
     height: 33px;
@@ -184,3 +159,44 @@ li {
     height: 33px;
    align-items: right;
   }
+
+
+  /*menu*/
+  nav {
+    background-color: white;
+    /* color de fondo del menú */
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 23px;
+}
+
+ul {
+    list-style-type: none;
+    /* quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* cambia el comportamiento de la lista a flexbox */
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+    float: left;
+    /* alinea los elementos de la lista en horizontal */
+}
+
+li a {
+    display: block;
+    color: #F78101;
+    text-align: center;
+    padding: 14px 16px;
+    /* espacio alrededor del texto del enlace */
+    text-decoration: none;
+}
+
+
+  /*footer*/

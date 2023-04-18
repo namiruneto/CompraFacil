@@ -52,45 +52,6 @@ body {
     gap: 20px;
 }
 
-/* estilo del formulario*/
-form {
-    border: 1px solid black;
-    padding: 20px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 150%;
-}
-
-form input[type="text"],
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-form input[type="file"] {
-    margin-bottom: 20px;
-}
-
-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
 
 /* borde para la imagen */
 .image-container {
@@ -135,7 +96,9 @@ label[for="imagen"] {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid #ddd;
+    border: 2px solid #ddd;    
+    margin: 0 auto;
+      
   }
   
   th, td {
